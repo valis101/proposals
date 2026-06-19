@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Texas Solar &amp; Batteries — Lead Generation Proposal | Vendi Group</title>
+<meta name="description" content="Proposal from Vendi Group to build a Meta-led solar lead generation system for Texas Solar & Batteries in the Bryan/College Station market." />
+<meta name="robots" content="noindex" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --cream: #FBF2E4;
+    --cream-soft: #F4E6CE;
+    --cream-card: #FFFAF1;
+    --navy: #1E3A5F;
+    --navy-deep: #14304E;
+    --navy-line: rgba(30, 58, 95, 0.12);
+    --navy-line-strong: rgba(30, 58, 95, 0.22);
+    --orange: #E67E32;
+    --orange-deep: #C76C29;
+    --orange-soft: rgba(230, 126, 50, 0.12);
+    --ink: #1E3A5F;
+    --ink-soft: #3A506B;
+    --ink-mute: #6B7A93;
+    --good: #2F8A5C;
+    --radius: 14px;
+    --shadow-card: 0 1px 0 rgba(30,58,95,0.04), 0 8px 28px rgba(30, 58, 95, 0.08);
+    --maxw: 1000px;
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+  }
+  a { color: var(--orange-deep); text-decoration: none; font-weight: 500; }
+  a:hover { color: var(--orange); }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 24px 80px; }
+
+  /* ---------- Header ---------- */
+  header.brand {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 4px 0 28px;
+    border-bottom: 1px solid var(--navy-line);
+  }
+  .logo-link { display: inline-flex; align-items: center; }
+  .logo-img { height: 44px; width: auto; display: block; }
+  .meta {
+    color: var(--ink-soft); font-size: 13px; text-align: right;
+    line-height: 1.5;
+  }
+  .meta .pill-meta {
+    display: inline-block; padding: 4px 10px;
+    background: var(--navy); color: var(--cream);
+    border-radius: 999px; font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; font-weight: 600; margin-bottom: 6px;
+  }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Hero ---------- */
+  .hero { margin-top: 56px; }
+  .eyebrow {
+    color: var(--orange); font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase; font-weight: 700;
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--navy);
+    margin: 14px 0 22px;
+  }
+  h1 .accent { color: var(--orange); font-style: normal; }
+  .lede {
+    color: var(--ink-soft); font-size: 18px; max-width: 720px;
+    line-height: 1.55;
+  }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .pill {
+    display: inline-flex; align-items: center; padding: 6px 12px;
+    border-radius: 999px; font-size: 12px; font-weight: 600;
+    background: var(--navy); color: var(--cream);
+    letter-spacing: 0.02em;
+  }
+  .pill.alt { background: var(--orange-soft); color: var(--orange-deep); border: 1px solid rgba(230,126,50,0.30); }
+
+  /* ---------- Hero flow chart ---------- */
+  .flow {
+    display: flex; align-items: stretch; flex-wrap: nowrap; gap: 8px;
+    margin-top: 6px;
+  }
+  .flow-node {
+    flex: 1 1 0; min-width: 0;
+    background: var(--cream-card);
+    border: 1px solid var(--navy-line);
+    border-radius: 12px;
+    padding: 16px 16px 18px;
+    box-shadow: var(--shadow-card);
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .flow-node .fn-step {
+    font-weight: 700; font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--orange-deep);
+  }
+  .flow-node .fn-title {
+    font-family: var(--serif); font-weight: 700; color: var(--navy);
+    font-size: 17px; line-height: 1.15;
+  }
+  .flow-node .fn-sub { color: var(--ink-mute); font-size: 13px; line-height: 1.45; }
+  .flow-arrow {
+    display: flex; align-items: center; justify-content: center;
+    color: var(--orange); font-size: 22px; font-weight: 700; flex: 0 0 auto;
+  }
+  @media (max-width: 760px) {
+    .flow { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); padding: 2px 0; }
+  }
+
+  /* ---------- Section ---------- */
+  section { margin-top: 56px; }
+  h2 {
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(24px, 3vw, 32px);
+    color: var(--navy);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+  }
+  h2 .num {
+    color: var(--orange); font-family: var(--serif); font-weight: 700;
+    margin-right: 12px;
+  }
+  .section-sub {
+    color: var(--ink-mute); font-size: 15px; margin-bottom: 22px;
+    font-weight: 400;
+  }
+
+  .card {
+    background: var(--cream-card);
+    border: 1px solid var(--navy-line);
+    border-radius: var(--radius);
+    padding: 26px 28px;
+    box-shadow: var(--shadow-card);
+  }
+  .card + .card { margin-top: 14px; }
+  .card h3 {
+    font-family: var(--serif); font-weight: 700;
+    font-size: 19px; color: var(--navy);
+    margin: 0 0 12px;
+  }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
+  .grid-2 > .card { margin-top: 0; }
+
+  ul.clean { margin: 0; padding-left: 20px; }
+  ul.clean li {
+    margin: 8px 0; color: var(--ink-soft); line-height: 1.55;
+  }
+  ul.clean li::marker { color: var(--orange); }
+  ul.clean li strong { color: var(--navy); font-weight: 600; }
+
+  /* ---------- Italic pull-quote (Vendi house style) ---------- */
+  .pullquote {
+    margin: 32px 0 0;
+    padding: 28px 32px;
+    background: var(--navy);
+    color: var(--cream);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+  }
+  .pullquote .q {
+    font-family: var(--serif); font-style: italic; font-weight: 500;
+    font-size: clamp(20px, 2.4vw, 26px);
+    line-height: 1.3; color: var(--cream);
+  }
+  .pullquote .attr {
+    margin-top: 10px;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--orange); font-weight: 700;
+  }
+
+  /* ---------- Calculator highlight ---------- */
+  .calc-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 16px; padding: 11px 20px;
+    background: var(--orange); color: #fff;
+    border-radius: 8px; font-weight: 700; font-size: 13px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .calc-link:hover { background: var(--orange-deep); color: #fff; }
+
+  /* ---------- Flow / roadmap steps ---------- */
+  .timeline { display: grid; gap: 12px; }
+  .step {
+    display: grid; grid-template-columns: 130px 1fr; gap: 16px;
+    align-items: start;
+    padding: 16px 18px;
+    background: var(--cream-card);
+    border: 1px solid var(--navy-line);
+    border-radius: 10px;
+  }
+  .step .when {
+    font-family: var(--serif); font-weight: 700;
+    color: var(--orange); font-size: 14px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    padding-top: 2px;
+  }
+  .step .what { color: var(--navy); font-size: 16px; font-weight: 600; }
+  .step .what small {
+    display: block; color: var(--ink-mute); font-size: 14px;
+    font-weight: 400; margin-top: 4px; line-height: 1.5;
+  }
+  .phase-tag {
+    display: inline-block; font-family: var(--sans); font-weight: 700;
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--orange-deep); background: var(--orange-soft);
+    border: 1px solid rgba(230,126,50,0.30);
+    border-radius: 999px; padding: 3px 9px; margin-bottom: 10px;
+  }
+
+  /* ---------- Pricing plans ---------- */
+  .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }
+  @media (max-width: 720px) { .plans { grid-template-columns: 1fr; } }
+  .plan {
+    position: relative;
+    background: var(--cream-card);
+    border: 1px solid var(--navy-line);
+    border-radius: var(--radius);
+    padding: 26px 28px 28px;
+    box-shadow: var(--shadow-card);
+    display: flex; flex-direction: column;
+  }
+  .plan.featured { border: 2px solid rgba(230,126,50,0.55); }
+  .plan .opt {
+    font-weight: 700; font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--orange-deep);
+  }
+  .plan h3 {
+    font-family: var(--serif); font-weight: 700; font-size: 22px;
+    color: var(--navy); margin: 8px 0 16px;
+  }
+  .plan .badge {
+    position: absolute; top: -11px; right: 22px;
+    background: var(--orange); color: #fff;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
+  }
+  .plan .price { display: flex; align-items: baseline; gap: 6px; }
+  .plan .price .num {
+    font-family: var(--serif); font-weight: 700; font-size: 38px;
+    color: var(--orange); line-height: 1;
+  }
+  .plan .price .per { color: var(--ink-mute); font-size: 14px; font-weight: 500; }
+  .plan .price-note { color: var(--ink-mute); font-size: 13px; margin-top: 8px; line-height: 1.5; }
+  .plan .spend {
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--navy-line);
+    color: var(--ink-soft); font-size: 14px; line-height: 1.5;
+  }
+  .plan .spend .amt2 { color: var(--navy); font-weight: 700; }
+  .plan ul.clean { margin: 16px 0 0; }
+  .plan ul.clean li { font-size: 14px; margin: 7px 0; }
+
+  .savings-callout {
+    margin-top: 16px; padding: 16px 18px;
+    background: var(--orange-soft);
+    border-left: 3px solid var(--orange);
+    border-radius: 8px;
+    color: var(--ink-soft); font-size: 14px; line-height: 1.55;
+  }
+  .savings-callout strong { color: var(--orange-deep); font-weight: 700; }
+
+  /* ---------- CTA ---------- */
+  .cta {
+    margin-top: 56px;
+    padding: 36px 36px 40px;
+    background: var(--navy);
+    border-radius: var(--radius);
+    color: var(--cream);
+    box-shadow: var(--shadow-card);
+  }
+  .cta h2 {
+    color: var(--cream);
+    font-size: clamp(24px, 3vw, 32px);
+    margin: 0 0 8px;
+  }
+  .cta h2 .num { color: var(--orange); }
+  .cta p {
+    color: rgba(251, 242, 228, 0.8);
+    margin: 0 0 22px;
+    max-width: 600px;
+    font-size: 16px;
+  }
+  .cta .signoff {
+    margin: 28px 0 0;
+    padding-top: 22px;
+    border-top: 1px solid rgba(251, 242, 228, 0.18);
+    color: var(--cream);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .cta .signoff a {
+    color: var(--orange);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .cta .signoff a:hover { text-decoration: underline; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 56px; padding-top: 28px;
+    border-top: 1px solid var(--navy-line);
+    color: var(--ink-mute); font-size: 13px;
+    display: flex; justify-content: space-between; gap: 16px;
+    flex-wrap: wrap; line-height: 1.6;
+  }
+  footer .foot-logo { height: 28px; width: auto; opacity: 0.85; margin-bottom: 6px; display: block; }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { background: white; }
+    .card, .step, .pullquote, .cta, .plan { box-shadow: none; }
+    .pullquote, .cta { background: var(--navy) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .plan, .savings-callout, .phase-tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Header -->
+    <header class="brand">
+      <a class="logo-link" href="https://vendigroup.com" target="_blank" rel="noopener">
+        <img class="logo-img" src="https://vendigroup.com/logos/vendi-group-wide.svg" alt="Vendi Group" />
+      </a>
+      <div class="meta">
+        <span class="pill-meta">Proposal v1</span><br/>
+        Prepared for <strong>Texas Solar &amp; Batteries</strong><br/>
+        June 18, 2026
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="eyebrow">Lead Generation &middot; Bryan&ndash;College Station</div>
+      <h1>Solar Energy <span class="accent">Lead Program</span></h1>
+
+      <div class="eyebrow" style="margin-top: 30px;">How it works</div>
+      <div class="flow">
+        <div class="flow-node">
+          <span class="fn-step">Step 1</span>
+          <span class="fn-title">Meta + Google Ads</span>
+          <span class="fn-sub">Homeowners see your ads on social &mdash; and when they search for solar.</span>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-node">
+          <span class="fn-step">Step 2</span>
+          <span class="fn-title">Calculator / Lander</span>
+          <span class="fn-sub">They run your 60-second savings calculator &mdash; and that tells us they're serious.</span>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-node">
+          <span class="fn-step">Step 3</span>
+          <span class="fn-title">Automated Follow-Up</span>
+          <span class="fn-sub">Instant text + email, then follow-up that screens out tire-kickers.</span>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-node">
+          <span class="fn-step">Step 4</span>
+          <span class="fn-title">Qualified Lead</span>
+          <span class="fn-sub">Ready-to-talk leads land in Workiz for your call.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. Investment -->
+    <section>
+      <h2><span class="num">01.</span>Pricing</h2>
+      <p class="section-sub">Two ways to start &mdash; pick the pace that fits. No setup fee, no long contract, and your ad budget always stays yours.</p>
+
+      <div class="plans">
+        <div class="plan">
+          <span class="opt">Option A</span>
+          <h3>Start with Meta</h3>
+          <div class="price"><span class="num">$500</span><span class="per">/mo management</span></div>
+          <div class="price-note">The simplest way to start &mdash; one channel first, add more once it's working.</div>
+          <div class="spend">&#8627; Recommended ad spend <span class="amt2">$500&ndash;$1,000/mo</span>, paid straight to Meta.</div>
+          <ul class="clean">
+            <li>Meta ads we test and refine every week</li>
+            <li>Automated follow-up, built in GoHighLevel</li>
+            <li>Your savings calculator, with tire-kicker screening built in</li>
+          </ul>
+        </div>
+
+        <div class="plan featured">
+          <span class="badge">Recommended</span>
+          <span class="opt">Option B</span>
+          <h3>Start with Meta + Google</h3>
+          <div class="price"><span class="num">$850</span><span class="per">/mo management</span></div>
+          <div class="price-note">$500 Meta + $350 Google &mdash; bundling saves you $150/mo, with both running from day one.</div>
+          <div class="spend">&#8627; Recommended ad spend <span class="amt2">$1,000&ndash;$2,000/mo</span>, split across both platforms.</div>
+          <ul class="clean">
+            <li>Everything in Option A, plus&hellip;</li>
+            <li>Google search ads &mdash; catch homeowners already searching for solar</li>
+            <li>Reaching people on social and the ones searching, at the same time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="savings-callout">
+        <strong>Included free:</strong> we're waiving <strong style="color: var(--navy);">all setup fees</strong> and building your <strong style="color: var(--navy);">solar savings calculator at no charge</strong>. You pay the monthly management above plus your own ad budget &mdash; which goes straight to the platform and stays fully yours.
+      </div>
+    </section>
+
+    <!-- 2. Deliverables -->
+    <section>
+      <h2><span class="num">02.</span>What's included</h2>
+      <p class="section-sub">The line items behind each channel.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Meta Ads</h3>
+          <ul class="clean">
+            <li>Ad images &mdash; static + carousel</li>
+            <li>Ad copy &mdash; headlines and several angles</li>
+            <li>Campaign setup &mdash; targeting + lead forms</li>
+            <li>Retargeting setup</li>
+            <li>New ads each week as we test</li>
+            <li>Savings calculator wired into the lead flow</li>
+            <li>GoHighLevel &mdash; instant reply + follow-up</li>
+            <li>Lead routing into Workiz</li>
+            <li>Reporting &mdash; cost per lead + what's working</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Google Ads <span style="font-weight: 400; color: var(--ink-mute); font-size: 14px;">(when you add it)</span></h3>
+          <ul class="clean">
+            <li>Search campaign setup &mdash; keywords + targeting</li>
+            <li>Search ad copy</li>
+            <li>Custom solar landing page &mdash; feeds your calculator</li>
+            <li>Conversion tracking</li>
+            <li>Reporting &mdash; cost per lead + what's working</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Roadmap -->
+    <section>
+      <h2><span class="num">03.</span>The roadmap</h2>
+      <p class="section-sub">Wherever you start, here's how the program grows from there.</p>
+
+      <div class="timeline">
+        <div class="step">
+          <div class="when">Next</div>
+          <div class="what">Add Google search ads<small>Orthodox Electric already runs Local Services Ads &mdash; but plenty of solar searches don't pull LSAs at all; it's mixed. Google search ads grab the searches the LSAs miss, pointed at a custom solar landing page we'd build to feed straight into your savings calculator. (Bundles with Meta to save $150/mo.)</small></div>
+        </div>
+        <div class="step">
+          <div class="when">As needed</div>
+          <div class="what">Bing Ads &mdash; the backup<small>If Google's ad space gets crowded or expensive, Bing reaches the same searches for less.</small></div>
+        </div>
+        <div class="step">
+          <div class="when">Long game</div>
+          <div class="what">SEO &amp; showing up locally<small>Built around your Google Business Profile, which ranks by how close you are to the searcher. Makes the most sense once there's a College Station address &mdash; in the meantime we start gathering reviews on your Navasota profile.</small></div>
+        </div>
+      </div>
+
+      <div class="savings-callout">
+        <strong>Why this order:</strong> paid ads (Meta, Google, Bing) reach College Station homeowners no matter where you're based &mdash; they target by area, not by your address. SEO and your Google Business Profile rank by how close you are to the searcher, which is why we save the SEO work for when a College Station address is in place.
+      </div>
+    </section>
+
+    <!-- 4. The ad angle -->
+    <section>
+      <h2><span class="num">04.</span>The ad angle</h2>
+      <p class="section-sub">What we open with &mdash; and how we land on the version that actually works.</p>
+
+      <div class="card">
+        <h3>We lead with: "lock in your electric rate"</h3>
+        <p style="color: var(--ink-soft); margin: 0 0 14px; font-size: 15px;">
+          Texas power prices keep climbing as data-center demand grows. So the message is simple: instead of
+          renting power from a utility that keeps raising rates, you lock in a flat rate with solar &mdash; paired
+          with the offer, solar from $167/mo and up to 30% back on a home battery.
+        </p>
+        <p style="color: var(--ink-soft); margin: 0 0 12px; font-size: 15px;">
+          That's the theme. From there we run a handful of angles to see which one gets the most response:
+        </p>
+        <ul class="clean">
+          <li><strong>Rising bills.</strong> "Texas electric bills keep climbing &mdash; you can opt out."</li>
+          <li><strong>Ownership.</strong> "Why keep renting your power? Own it, and lock your rate for good."</li>
+          <li><strong>Neighbors.</strong> "Your neighbors are locking in today's rate before the next hike."</li>
+          <li><strong>Calculator-led.</strong> "See exactly what you'd save in 60 seconds &mdash; no pushy sales call."</li>
+        </ul>
+      </div>
+
+      <div style="margin-top: 24px;">
+        <h3 style="font-family: var(--serif); font-weight: 700; color: var(--navy); font-size: 19px; margin: 0 0 6px;">How we find the angle that works</h3>
+        <p style="color: var(--ink-mute); font-size: 15px; margin: 0 0 16px;">
+          We don't bet everything on one ad. We run several angles at once, let the results decide, and put out fresh
+          ads every week until we land on what works.
+        </p>
+        <div class="timeline">
+          <div class="step">
+            <div class="when">Launch</div>
+            <div class="what">Run several angles side by side<small>Each gets its own image and headline, so we're testing real alternatives &mdash; not guessing.</small></div>
+          </div>
+          <div class="step">
+            <div class="when">Measure</div>
+            <div class="what">Watch the numbers for a week<small>Cost per lead, click-through, and how many people actually finish the calculator.</small></div>
+          </div>
+          <div class="step">
+            <div class="when">Cut &amp; scale</div>
+            <div class="what">Drop what's flat, fund what's working<small>Budget moves to the angles earning their keep.</small></div>
+          </div>
+          <div class="step">
+            <div class="when">Every week</div>
+            <div class="what">Put out new ads and keep refining<small>Fresh ads each week until we find the winner &mdash; then we put more budget behind it.</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pullquote">
+        <div class="q">"We don't guess which ad will work. We put a few out there and let the results pick the winner."</div>
+        <div class="attr">&mdash; HOW WE APPROACH THE ADS</div>
+      </div>
+    </section>
+
+    <!-- 5. The system -->
+    <section>
+      <h2><span class="num">05.</span>How we generate leads</h2>
+      <p class="section-sub">The whole setup, rolled out in phases. We start with the part that brings results fastest.</p>
+
+      <div class="card">
+        <span class="phase-tag">Phase 1 &mdash; Start here</span>
+        <h3>Meta ads + automated follow-up</h3>
+        <ul class="clean">
+          <li><strong>Meta ads built on the angle that works.</strong> "Lock in your electric rate before Texas prices climb." Static images and carousels (no video), with lead forms and retargeting.</li>
+          <li><strong>Every click lands on your calculator.</strong> It pulls people in and filters out the casual browsers at the same time.</li>
+          <li><strong>Automated follow-up behind it (GoHighLevel).</strong> The moment a lead comes in, they get an automatic text and email &mdash; no waiting, no leads going cold. The follow-up screens out tire-kickers, so a <em>human</em> call is saved for people worth your time.</li>
+          <li><strong>Qualified leads land in Workiz.</strong> The good ones show up in Workiz, ready for your call and dispatch &mdash; nothing changes about how you already run jobs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Ready to get started?</h2>
+      <p>
+        Reply to my email or shoot me a text with the go-ahead and I'll get everything set up &mdash; and send over
+        a link to schedule our kickoff call the same day.
+      </p>
+      <p class="signoff">
+        Jason Walkoviak<br />
+        <a href="tel:+18328759451">832-875-9451</a>
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <img class="foot-logo" src="https://vendigroup.com/logos/vendi-group-wide.svg" alt="Vendi Group" />
+        Proposal for Texas Solar &amp; Batteries · This proposal is valid for 30 days from June 18, 2026.
+      </div>
+      <div style="text-align:right;">
+        Questions? Just reply to the email this came from.<br/>
+        <a href="https://vendigroup.com" target="_blank" rel="noopener">vendigroup.com</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -3,3 +3,6 @@ Thumbs.db
 *.swp
 .vscode/
 .idea/
+
+# Internal proposal working notes — never publish to the public site
+texas-solar-batteries/*.md
