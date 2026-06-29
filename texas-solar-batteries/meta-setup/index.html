@@ -19,6 +19,7 @@
   header .by { margin:0; font-size:13px; opacity:.9; }
   .body { padding:28px 36px 36px; }
   .lede { color:var(--muted); font-size:15px; margin:0 0 22px; }
+  .lede b { color:var(--ink); }
   .callout { background:var(--accent-soft); border-left:4px solid var(--accent);
     border-radius:8px; padding:14px 16px; margin:0 0 26px; font-size:14.5px; }
   .callout b { color:var(--accent); }
@@ -34,11 +35,12 @@
   .step-body h3 { margin:2px 0 6px; font-size:16px; }
   .step-body p, .step-body ul { margin:6px 0; font-size:14.5px; }
   .step-body ul { padding-left:18px; }
+  .step-body ul ul { margin:4px 0; }
   code { background:#f0f2f4; padding:1px 6px; border-radius:5px; font-size:13px; }
   .idbox { background:#fff8e1; border:1.5px dashed #e0a800; border-radius:8px; padding:12px 14px;
     margin:10px 0; font-size:14px; }
-  .idbox .blank { display:inline-block; min-width:200px; border-bottom:1.5px solid #999;
-    margin-left:6px; color:#b56a00; font-weight:600; }
+  .idbox code { background:#fff3cd; font-size:14px; font-weight:600; }
+  .note { font-size:13px; color:var(--muted); font-style:italic; }
   .highlight { background:#fff8e1; }
   footer { border-top:1px solid var(--line); padding:18px 36px 26px; color:var(--muted); font-size:13.5px; }
   .tag { display:inline-block; background:var(--accent-soft); color:var(--accent); font-weight:600;
@@ -53,23 +55,22 @@
 <div class="wrap">
   <header>
     <h1>Meta Setup Guide — Texas Solar &amp; Batteries</h1>
-    <p class="by">Prepared by Vendi Local &nbsp;·&nbsp; For: Peter &nbsp;·&nbsp; ~20–30 minutes</p>
+    <p class="by">Prepared by Vendi Local &nbsp;·&nbsp; For: Peter &nbsp;·&nbsp; ~20 minutes</p>
   </header>
   <div class="body">
-    <p class="lede">Goal: get the Facebook side ready so <b>Vendi Local</b> can run the solar lead-gen ads. It's all point-and-click — just follow the steps in order.</p>
+    <p class="lede">Goal: stand up the <b>Facebook page + ad account</b> so Vendi Local can run the solar ads. You're just creating the accounts — <b>Jay handles all the branding</b> (logo, cover image, creative), so don't worry about any of that.</p>
 
     <div class="callout">
-      <b>About the existing Orthodox Electric page:</b> Keep it — we are <b>not</b> using it for the solar ads.
-      We'll create a <b>separate "Texas Solar &amp; Batteries" page</b> so the ads match the solar brand.
-      The OE page stays exactly as it is. (The business behind everything is still Orthodox Electric — that part doesn't change.)
+      <b>About the existing Orthodox Electric page:</b> Keep it — we're <b>not</b> using it for the solar ads.
+      We'll create a <b>separate "Texas Solar &amp; Batteries" page</b>. The OE page stays exactly as it is.
     </div>
 
-    <h2 class="section">What you're setting up</h2>
+    <h2 class="section">What you're doing</h2>
     <ol class="overview">
-      <li>A Business Portfolio (the container that holds the page + ad account)</li>
-      <li>A new <b>Texas Solar &amp; Batteries</b> Facebook page</li>
-      <li>An ad account + payment method</li>
-      <li>Access for <b>Vendi Local</b> to manage it</li>
+      <li>Make sure you have access to the business account</li>
+      <li>Create the <b>Texas Solar &amp; Batteries</b> page (just create it — no branding)</li>
+      <li>Create the ad account</li>
+      <li>Give <b>Vendi Local</b> access</li>
     </ol>
 
     <h2 class="section">Steps</h2>
@@ -77,11 +78,14 @@
     <div class="step">
       <div class="num">1</div>
       <div class="step-body">
-        <h3>Business Portfolio</h3>
-        <p>Go to <b>business.facebook.com</b>.</p>
+        <h3>Make sure you have access <span class="tag">do this first</span></h3>
+        <p>Everything happens inside <b>Orthodox Electric's Meta Business account</b> at <b>business.facebook.com</b>.</p>
         <ul>
-          <li>If Orthodox Electric already has a <b>Business Portfolio</b> (a.k.a. Business Manager), use it.</li>
-          <li>If not, create one → name it <b>Orthodox Electric</b>, use Thomas's business email.</li>
+          <li><b>If you can already open Orthodox Electric's Business Settings</b> → you're good, go to Step 2.</li>
+          <li><b>If you don't have access yet</b> → ask <b>Thomas</b> to add you:
+            <ul><li>Thomas: <b>business.facebook.com → Business Settings → People → Add</b> → enter <b>your email</b> → role <b>Admin</b> → send invite. You accept the email invite, then continue.</li></ul>
+          </li>
+          <li><b>If Orthodox Electric doesn't have a Business account at all</b> → with Thomas's OK, create one at <b>business.facebook.com</b> (name: <i>Orthodox Electric</i>, Thomas's business email), then continue.</li>
         </ul>
       </div>
     </div>
@@ -90,24 +94,25 @@
       <div class="num">2</div>
       <div class="step-body">
         <h3>Create the Texas Solar &amp; Batteries page</h3>
-        <p>In the portfolio: <b>Settings → Pages → Add → Create a new Page</b>.</p>
+        <p>In Business Settings: <b>Pages → Add → Create a new Page</b>.</p>
         <ul>
           <li><b>Name:</b> Texas Solar &amp; Batteries</li>
           <li><b>Category:</b> Solar Energy Company (or closest)</li>
-          <li>Add a logo, the website <b>txsolarandbatteries.com</b>, and the service area (Bryan–College Station / Brazos Valley).</li>
         </ul>
+        <p class="note">That's all for the page — Jay handles the logo, cover photo, and the rest. Leave those blank.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="num">3</div>
       <div class="step-body">
-        <h3>Ad account + payment</h3>
-        <p>In the portfolio: <b>Settings → Ad accounts → Add → Create a new ad account</b>.</p>
+        <h3>Create the ad account</h3>
+        <p>In Business Settings: <b>Ad accounts → Add → Create a new ad account</b>.</p>
         <ul>
           <li><b>Name:</b> Texas Solar &amp; Batteries</li>
-          <li>Add <b>Thomas's card</b> as the payment method (the client pays Meta directly for ad spend).</li>
+          <li><b>Payment method:</b> add <b>Thomas's card</b> (the client pays Meta directly).</li>
         </ul>
+        <p class="note">If you don't have the card, Thomas can add this part.</p>
       </div>
     </div>
 
@@ -115,9 +120,9 @@
       <div class="num">4</div>
       <div class="step-body">
         <h3>Give Vendi Local access <span class="tag">Vendi needs this</span></h3>
-        <p>In the portfolio: <b>Settings → Partners → Add partner</b>.</p>
-        <div class="idbox">Enter <b>Vendi Local's Business ID:</b> <span class="blank">2035303137072606</span></div>
-        <p>Share these two assets with the partner, with <b>Manage / Admin</b> access:</p>
+        <p>In Business Settings: <b>Partners → Add partner</b>.</p>
+        <div class="idbox">Enter <b>Vendi Local's Business ID:</b> <code>2035303137072606</code></div>
+        <p>Share these two with the partner, with <b>Manage / Admin</b> access:</p>
         <ul>
           <li>the <b>Texas Solar &amp; Batteries</b> page</li>
           <li>the <b>ad account</b></li>
@@ -129,7 +134,7 @@
       <div class="num">5</div>
       <div class="step-body">
         <h3>Done</h3>
-        <p>Message <b>Jay</b> that it's shared. Vendi Local takes it from there (pixel, campaign, creative).</p>
+        <p>Message <b>Jay</b> that it's shared. Vendi Local takes it from there (branding, pixel, campaign).</p>
       </div>
     </div>
   </div>
