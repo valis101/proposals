@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How Texas Solar & Batteries follows up with every lead from the solar savings calculator — a 14-day SMS + email nurture, shown as real texts and emails. Prepared by Vendi Group.">
+<meta name="robots" content="noindex">
+<title>Texas Solar &amp; Batteries — Lead Follow-Up Sequence</title>
+<style>
+  :root{
+    --ground:#FBFAF7;
+    --panel:#F4F1E9;
+    --ink:#1B2334;
+    --ink-soft:#525C71;
+    --ink-faint:#8A8474;
+    --gold:#DE9016;        /* text-message channel */
+    --gold-soft:#FBEBCE;
+    --gold-line:#EAC98A;
+    --sky:#2C6188;         /* email channel */
+    --sky-soft:#DEEAF2;
+    --sky-line:#AFC9DC;
+    --line:#E6E0D4;
+    --good:#2E7D57;
+    --serif:"Charter","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body,.page{margin:0;}
+  .page{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:76px 0 56px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-260px;left:50%;
+    width:900px;height:520px;
+    transform:translateX(-50%);
+    background:radial-gradient(ellipse at center,rgba(222,144,22,.22),rgba(222,144,22,.06) 42%,transparent 66%);
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;}
+  .eyebrow{
+    font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--gold);margin:0 0 20px;
+  }
+  h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(30px,5vw,46px);
+    line-height:1.1;
+    letter-spacing:-.01em;
+    text-wrap:balance;
+    margin:0 0 20px;
+    max-width:19ch;
+  }
+  .lede{
+    font-size:clamp(16px,2.1vw,19px);
+    color:var(--ink-soft);
+    max-width:60ch;
+    margin:0;
+  }
+
+  /* ---------- sample lead ---------- */
+  .sample{
+    margin:34px 0 0;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 22px;
+    box-shadow:0 1px 0 rgba(27,35,52,.03);
+  }
+  .sample-h{
+    display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+    font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-faint);margin-bottom:14px;
+  }
+  .sample-h span{font-weight:500;letter-spacing:0;text-transform:none;font-size:13px;color:var(--ink-soft);}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    font-size:13.5px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:5px 13px;
+    color:var(--ink);
+    font-variant-numeric:tabular-nums;
+  }
+  .chip b{font-weight:600;}
+  .chip.goal{background:var(--gold-soft);border-color:var(--gold-line);}
+
+  /* ---------- section headers ---------- */
+  section{padding:52px 0;}
+  .sec-head{margin:0 0 6px;}
+  .sec-title{
+    font-family:var(--serif);font-weight:600;
+    font-size:clamp(22px,3.4vw,30px);letter-spacing:-.01em;margin:0;
+  }
+  .sec-sub{color:var(--ink-soft);margin:10px 0 0;max-width:62ch;}
+
+  /* ---------- legend ---------- */
+  .legend{display:flex;gap:22px;flex-wrap:wrap;margin:22px 0 40px;}
+  .legend .item{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--ink-soft);}
+  .swatch{width:13px;height:13px;border-radius:50%;flex:0 0 auto;}
+  .swatch.g{background:var(--gold);}
+  .swatch.b{background:var(--sky);}
+
+  /* ---------- timeline ---------- */
+  .timeline{margin-top:8px;}
+  .entry{display:flex;align-items:stretch;}
+  .rail{
+    flex:0 0 96px;text-align:right;padding:2px 24px 0 0;
+    border-right:2px solid var(--line);position:relative;
+  }
+  .rail .when{font-size:13px;font-weight:600;color:var(--ink);line-height:1.25;}
+  .rail .whom{font-size:11.5px;color:var(--ink-faint);letter-spacing:.04em;text-transform:uppercase;margin-top:3px;}
+  .dot{
+    position:absolute;right:-8px;top:4px;width:14px;height:14px;border-radius:50%;
+    border:3px solid var(--ground);
+  }
+  .dot.g{background:var(--gold);}
+  .dot.b{background:var(--sky);}
+  .content{flex:1;min-width:0;padding:0 0 34px 30px;}
+  .entry:last-child .content{padding-bottom:6px;}
+
+  /* channel tag */
+  .tag{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .tag.g{color:var(--gold);}
+  .tag.b{color:var(--sky);}
+  .tag .goal-note{color:var(--ink-faint);font-weight:500;letter-spacing:.02em;text-transform:none;}
+
+  /* ---------- SMS bubble ---------- */
+  .sms{max-width:430px;}
+  .from{font-size:12.5px;color:var(--ink-faint);margin:0 0 7px 3px;}
+  .from b{color:var(--ink-soft);font-weight:600;}
+  .bubble{
+    position:relative;
+    background:var(--gold-soft);
+    border:1px solid var(--gold-line);
+    border-radius:18px 18px 18px 5px;
+    padding:12px 15px;
+    font-size:15px;
+    color:#3a2f14;
+    line-height:1.5;
+  }
+  .bubble::before{
+    content:"";position:absolute;left:-6px;bottom:0;width:12px;height:16px;
+    background:var(--gold-soft);border-left:1px solid var(--gold-line);border-bottom:1px solid var(--gold-line);
+    border-radius:0 0 0 12px;clip-path:polygon(100% 0,100% 100%,0 100%);
+  }
+  .optout{display:block;margin-top:7px;font-size:12px;color:var(--ink-faint);}
+
+  /* ---------- email card ---------- */
+  .email{
+    max-width:560px;background:#fff;border:1px solid var(--line);
+    border-left:3px solid var(--sky);border-radius:12px;overflow:hidden;
+    box-shadow:0 1px 3px rgba(27,35,52,.05);
+  }
+  .email-head{padding:15px 20px 13px;border-bottom:1px solid var(--line);background:var(--sky-soft);}
+  .email-meta{font-size:11.5px;color:var(--sky);font-weight:600;letter-spacing:.03em;margin-bottom:6px;}
+  .subject{font-size:16px;font-weight:600;color:var(--ink);margin:0;line-height:1.3;}
+  .preview{font-size:13px;color:var(--ink-soft);margin:5px 0 0;}
+  .email-body{padding:16px 20px 20px;font-size:14.5px;color:var(--ink);}
+  .email-body p{margin:0 0 12px;}
+  .email-body p:last-child{margin-bottom:0;}
+  .email-body ul{margin:2px 0 14px;padding-left:2px;list-style:none;}
+  .email-body li{position:relative;padding:0 0 8px 26px;color:var(--ink-soft);}
+  .email-body li::before{content:"";position:absolute;left:6px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--sky);}
+  .email-body li b{color:var(--ink);font-weight:600;}
+  .email-body ol{margin:2px 0 14px;padding-left:22px;}
+  .email-body ol li{padding-left:6px;color:var(--ink-soft);}
+  .email-body ol li::before{display:none;}
+  .sign{color:var(--ink-soft);font-style:italic;}
+  .call{
+    display:flex;align-items:center;gap:9px;margin-top:6px;
+    font-size:15px;color:var(--ink);
+  }
+  .call .ic{color:var(--sky);flex:0 0 auto;font-size:15px;}
+  .call .num{
+    font-weight:700;color:var(--sky);white-space:nowrap;
+    font-variant-numeric:tabular-nums;letter-spacing:.01em;
+  }
+
+  /* ---------- reply logic ---------- */
+  .reply-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px;}
+  .rcard{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .rcard .rtop{
+    font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    display:flex;align-items:center;gap:8px;
+  }
+  .rcard .rtop .d{width:9px;height:9px;border-radius:50%;flex:0 0 auto;}
+  .rcard h3{font-family:var(--serif);font-weight:600;font-size:19px;margin:2px 0 2px;}
+  .rcard p{margin:0;font-size:14px;color:var(--ink-soft);}
+  .rcard.reply .rtop{color:var(--gold);} .rcard.reply .d{background:var(--gold);}
+  .rcard.book .rtop{color:var(--good);} .rcard.book .d{background:var(--good);}
+  .rcard.stop .rtop{color:var(--ink-faint);} .rcard.stop .d{background:var(--ink-faint);}
+
+  /* ---------- confirm ---------- */
+  .confirm{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .qlist{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}
+  .q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;}
+  .q .num{
+    font-family:var(--serif);font-size:15px;color:var(--gold);font-weight:600;
+    display:inline-block;margin-bottom:8px;
+  }
+  .q h4{margin:0 0 6px;font-size:16px;font-weight:600;}
+  .q p{margin:0;font-size:14px;color:var(--ink-soft);}
+
+  /* ---------- footer ---------- */
+  .foot{padding:34px 0 56px;color:var(--ink-faint);font-size:13px;}
+  .foot .brand{color:var(--ink-soft);font-weight:600;}
+
+  @media (max-width:640px){
+    .rail{flex:0 0 66px;padding-right:16px;}
+    .content{padding-left:20px;}
+    .reply-grid{grid-template-columns:1fr;}
+    .qlist{grid-template-columns:1fr;}
+    .hero{padding:52px 0 40px;}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .entry,.hero .wrap>*,.rcard,.q{animation:rise .5s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Texas Solar &amp; Batteries · Automated Lead Follow-Up</p>
+      <h1>What happens after someone gets their solar estimate</h1>
+      <p class="lede">Every homeowner who finishes the savings calculator gets a warm, personal 14-day
+        follow-up — <b>5 text messages and 5 emails</b>, each built from their own roof numbers. It runs
+        automatically, and the instant they reply, a real conversation takes over.</p>
+
+      <div class="sample">
+        <div class="sample-h">Example lead <span>— every message auto-fills each homeowner's real details. Here's how it looks for a sample customer:</span></div>
+        <div class="chips">
+          <span class="chip"><b>Jane</b></span>
+          <span class="chip">College Station</span>
+          <span class="chip">Bill <b>$220</b>/mo</span>
+          <span class="chip"><b>18</b> panels</span>
+          <span class="chip">Est. savings <b>~$2,400</b>/yr</span>
+          <span class="chip goal">Goal: lower the bill</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">The 14-day sequence</h2>
+        <p class="sec-sub">Front-loaded while the lead is hottest, then spaced out. Timed to feel like a
+          helpful person following up — never spam.</p>
+      </div>
+
+      <div class="legend">
+        <div class="item"><span class="swatch g"></span> Text message</div>
+        <div class="item"><span class="swatch b"></span> Email</div>
+      </div>
+
+      <div class="timeline">
+
+        <!-- SMS 1 -->
+        <div class="entry">
+          <div class="rail"><div class="when">Right away</div><div class="whom">0 min</div><span class="dot g"></span></div>
+          <div class="content">
+            <div class="tag g"><span class="swatch g"></span> Text · Intro + motivation</div>
+            <div class="sms">
+              <p class="from"><b>Peter</b> · Texas Solar &amp; Batteries</p>
+              <div class="bubble">
+                Hi Jane, it's Peter with Texas Solar &amp; Batteries 🌞 Just emailed your custom estimate
+                (~$2,400/yr in savings). Is lowering your bill your main reason for going solar, or is
+                something else driving it?
+                <span class="optout">Reply STOP to opt out.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email 1 -->
+        <div class="entry">
+          <div class="rail"><div class="when">Right away</div><div class="whom">0 min</div><span class="dot b"></span></div>
+          <div class="content">
+            <div class="tag b"><span class="swatch b"></span> Email · Deliver the estimate</div>
+            <div class="email">
+              <div class="email-head">
+                <div class="email-meta">Texas Solar &amp; Batteries</div>
+                <p class="subject">Your solar estimate, Jane — and what it's worth as rates climb</p>
+                <p class="preview">~$2,400/yr, locked in while the utility keeps rising</p>
+              </div>
+              <div class="email-body">
+                <p>Hi Jane, here's what your roof in College Station is working with:</p>
+                <ul>
+                  <li>System size: <b>~18 panels</b></li>
+                  <li>Estimated savings: <b>~$2,400 per year</b></li>
+                  <li>Current bill: about <b>$220/mo</b></li>
+                  <li>Your goal — <b>lowering your bill</b> — is exactly what this protects.</li>
+                </ul>
+                <p>Here's the part most people miss: your utility rate doesn't hold still — it climbs almost
+                  every year. Going solar locks in your cost of power, so while your neighbors' bills keep
+                  creeping up, yours stays put.</p>
+                <p>This is a satellite-based estimate. The next step (totally optional) is a free on-site
+                  consultation — a local advisor comes out, reviews your roof's solar potential, and gives
+                  you real, custom numbers.</p>
+                <p>No call center, no pressure. Just real numbers for your home.</p>
+                <p class="call"><span class="ic">📞</span> Want to talk it through? Call Peter at
+                  <span class="num">979-500-2706</span></p>
+                <p class="sign">— Peter, Texas Solar &amp; Batteries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SMS 2 -->
+        <div class="entry">
+          <div class="rail"><div class="when">1 hour later</div><div class="whom">if no reply</div><span class="dot g"></span></div>
+          <div class="content">
+            <div class="tag g"><span class="swatch g"></span> Text · Get ahead of rates</div>
+            <div class="sms">
+              <p class="from"><b>Peter</b> · Texas Solar &amp; Batteries</p>
+              <div class="bubble">
+                Jane, are you trying to get ahead of the future electric rate increases in College Station,
+                or just exploring solar for now?
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email 2 -->
+        <div class="entry">
+          <div class="rail"><div class="when">Day 1</div><span class="dot b"></span></div>
+          <div class="content">
+            <div class="tag b"><span class="swatch b"></span> Email · Two ways to lock in</div>
+            <div class="email">
+              <div class="email-head">
+                <div class="email-meta">Texas Solar &amp; Batteries</div>
+                <p class="subject">Two ways to lock in your rate (one is $0 down)</p>
+                <p class="preview">Which one fits your home, Jane?</p>
+              </div>
+              <div class="email-body">
+                <p>Hi Jane, once people realize they can lock in their electric rate, the next question is
+                  always how to pay for it. Really just two ways —</p>
+                <ol>
+                  <li><b>$0-down monthly lease</b> — no upfront cost, predictable payment, we handle install
+                    + maintenance. The easiest way to lock in your rate and start saving right away.</li>
+                  <li><b>Pay upfront</b> — unlocks up to 30% back on eligible EG4 equipment and up to 15% off
+                    panels. Bigger long-term savings if you can cover it upfront.</li>
+                </ol>
+                <p>Both do the same core thing: trade an unpredictable, rising utility bill for a fixed cost
+                  you control. Most folks aren't sure which fits until they see both side by side for their
+                  actual 18-panel system — that's exactly what the free on-site consult is for.</p>
+                <p class="call"><span class="ic">📞</span> Want to see both for your home? Call Peter at
+                  <span class="num">979-500-2706</span></p>
+                <p class="sign">— Peter, Texas Solar &amp; Batteries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SMS 3 -->
+        <div class="entry">
+          <div class="rail"><div class="when">Day 2</div><span class="dot g"></span></div>
+          <div class="content">
+            <div class="tag g"><span class="swatch g"></span> Text · Free comparison</div>
+            <div class="sms">
+              <p class="from"><b>Peter</b> · Texas Solar &amp; Batteries</p>
+              <div class="bubble">
+                Jane, I can put together a quick side-by-side of what you'd pay with solar vs. staying with
+                the utility over 10 years. Want me to send it over?
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email 3 -->
+        <div class="entry">
+          <div class="rail"><div class="when">Day 4</div><span class="dot b"></span></div>
+          <div class="content">
+            <div class="tag b"><span class="swatch b"></span> Email · Answering objections</div>
+            <div class="email">
+              <div class="email-head">
+                <div class="email-meta">Texas Solar &amp; Batteries</div>
+                <p class="subject">"Will solar actually work on MY roof?"</p>
+                <p class="preview">The 4 questions we hear most, Jane</p>
+              </div>
+              <div class="email-body">
+                <p>Hi Jane, before anyone books a consult, the same questions always come up — so let me just
+                  answer them:</p>
+                <ul>
+                  <li><b>"Are rates really going to keep going up?"</b> Historically, yes — Texas electricity
+                    prices have trended up year after year. Getting ahead of that is the whole point of going
+                    solar.</li>
+                  <li><b>"Is my roof a good fit?"</b> We already pulled your roof's sun exposure for the
+                    estimate. The advisor confirms shading, angle, and layout on-site.</li>
+                  <li><b>"What about my credit?"</b> The $0-down lease has flexible qualification. We'll tell
+                    you upfront, no surprises.</li>
+                  <li><b>"Is this a hard sell?"</b> No. One local advisor, real numbers, zero pressure.</li>
+                </ul>
+                <p>Still the same goal — lowering your bill. Want to grab a time?</p>
+                <p class="call"><span class="ic">📞</span> Call Peter to set it up:
+                  <span class="num">979-500-2706</span></p>
+                <p class="sign">— Peter, Texas Solar &amp; Batteries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SMS 4 -->
+        <div class="entry">
+          <div class="rail"><div class="when">Day 6</div><span class="dot g"></span></div>
+          <div class="content">
+            <div class="tag g"><span class="swatch g"></span> Text · On-site consult</div>
+            <div class="sms">
+              <p class="from"><b>Peter</b> · Texas Solar &amp; Batteries</p>
+              <div class="bubble">
+                Jane, we've got a couple on-site consult slots open in College Station this week — an advisor
+                comes out, reviews your roof's solar potential and goes over your numbers in person. Interested?
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email 4 -->
+        <div class="entry">
+          <div class="rail"><div class="when">Day 9</div><span class="dot b"></span></div>
+          <div class="content">
+            <div class="tag b"><span class="swatch b"></span> Email · The cost of waiting</div>
+            <div class="email">
+              <div class="email-head">
+                <div class="email-meta">Texas Solar &amp; Batteries</div>
+                <p class="subject">The real math on waiting, Jane</p>
+                <p class="preview">Every year rates climb, waiting costs you</p>
+              </div>
+              <div class="email-body">
+                <p>Hi Jane, wanted to lay this out plainly. The case for solar isn't just today's savings —
+                  it's what happens as your utility rate keeps climbing.</p>
+                <p>Right now you're at about $220/mo. That number rarely goes down; it creeps up year after
+                  year, for as long as you're in your home. Solar flips that — you lock in your cost now and
+                  stop riding the increases.</p>
+                <p>Your estimate (~$2,400/yr in savings) is the starting point, and it only grows the longer
+                  rates rise. Pay upfront and you can also get up to 30% back on eligible equipment and up to
+                  15% off panels — so it's cheaper to lock in now than it likely will be later.</p>
+                <p>An advisor can show you exactly how it plays out for your home on a free on-site visit.</p>
+                <p class="call"><span class="ic">📞</span> See how it plays out — call Peter at
+                  <span class="num">979-500-2706</span></p>
+                <p class="sign">— Peter, Texas Solar &amp; Batteries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SMS 5 -->
+        <div class="entry">
+          <div class="rail"><div class="when">Day 14</div><div class="whom">last text</div><span class="dot g"></span></div>
+          <div class="content">
+            <div class="tag g"><span class="swatch g"></span> Text · Friendly break-up</div>
+            <div class="sms">
+              <p class="from"><b>Peter</b> · Texas Solar &amp; Batteries</p>
+              <div class="bubble">
+                Jane, should I keep your estimate open? Reply 1 = still interested, 2 = not right now,
+                3 = went another direction. Totally fine either way 🙂
+                <span class="optout">Reply STOP to opt out.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email 5 -->
+        <div class="entry">
+          <div class="rail"><div class="when">Day 14</div><div class="whom">last email</div><span class="dot b"></span></div>
+          <div class="content">
+            <div class="tag b"><span class="swatch b"></span> Email · Door left open</div>
+            <div class="email">
+              <div class="email-head">
+                <div class="email-meta">Texas Solar &amp; Batteries</div>
+                <p class="subject">Should I close out your estimate, Jane?</p>
+                <p class="preview">No worries either way</p>
+              </div>
+              <div class="email-body">
+                <p>Hi Jane, I've reached out a few times and don't want to clutter your inbox, so I'll pause
+                  here. Your roof estimate (~18 panels, ~$2,400/yr) is saved if you ever want to pick it back
+                  up.</p>
+                <p>One thing I'll leave you with: every year you wait, the utility rate ticks up — and
+                  locking it in only gets more expensive. Whenever you're ready to get ahead of that, just
+                  reply or give me a call.</p>
+                <p class="call"><span class="ic">📞</span> Ready when you are — call Peter at
+                  <span class="num">979-500-2706</span></p>
+                <p class="sign">— Peter, Texas Solar &amp; Batteries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">The moment they reply</h2>
+        <p class="sec-sub">The sequence never talks over a live customer. The second someone responds,
+          it steps aside.</p>
+      </div>
+      <div class="reply-grid">
+        <div class="rcard reply">
+          <div class="rtop"><span class="d"></span> They reply</div>
+          <h3>A real conversation takes over</h3>
+          <p>Follow-up pauses instantly. Our AI assistant answers their questions and helps them pick a
+            time — no more scheduled texts landing mid-chat.</p>
+        </div>
+        <div class="rcard book">
+          <div class="rtop"><span class="d"></span> They book</div>
+          <h3>Handed to your team</h3>
+          <p>The lead and all their details — name, phone, bill, system size, savings — flow straight into
+            Workiz, and follow-up stops. It's your appointment from there.</p>
+        </div>
+        <div class="rcard stop">
+          <div class="rtop"><span class="d"></span> They opt out</div>
+          <h3>Removed immediately</h3>
+          <p>Reply STOP and they're taken off texts right away — fully compliant with carrier rules, no
+            action needed on your end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="confirm">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">A couple of things to confirm with you</h2>
+        <p class="sec-sub">The copy is written and ready. Two quick calls from you and we lock it in.</p>
+      </div>
+      <div class="qlist">
+        <div class="q">
+          <span class="num">01</span>
+          <h4>Sending as Peter — good to go?</h4>
+          <p>The texts and emails feel most personal coming from a real name, so they'll go out under
+            "Peter." Easy to switch to another rep or the business name anytime — just say the word.</p>
+        </div>
+        <div class="q">
+          <span class="num">02</span>
+          <h4>Comfortable with the pace?</h4>
+          <p>5 texts + 5 emails over 14 days, front-loaded. That's the sweet spot for warm leads — but we
+            can dial it lighter or heavier to your preference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span class="brand">Vendi Group</span> · Prepared for Texas Solar &amp; Batteries · Automated lead
+      follow-up runs in GoHighLevel and hands qualified leads to Workiz.
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
