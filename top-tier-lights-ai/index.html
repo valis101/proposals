@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Top Tier Lights — What Your Conversations Told Us | Vendi Group</title>
+<meta name="description" content="Findings from 514 real customer conversations across three seasons of Top Tier Lights holiday lighting, and what they mean for the 2026 season." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --cream: #FBF2E4;
+    --cream-soft: #F4E6CE;
+    --cream-card: #FFFAF1;
+    --navy: #1E3A5F;
+    --navy-deep: #14304E;
+    --navy-line: rgba(30, 58, 95, 0.12);
+    --orange: #E67E32;
+    --orange-deep: #C76C29;
+    --orange-soft: rgba(230, 126, 50, 0.12);
+    --ink: #1E3A5F;
+    --ink-soft: #3A506B;
+    --ink-mute: #6B7A93;
+    --good: #2F8A5C;
+    --radius: 14px;
+    --shadow-card: 0 1px 0 rgba(30,58,95,0.04), 0 8px 28px rgba(30, 58, 95, 0.08);
+    --maxw: 1000px;
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans); color: var(--ink); background: var(--cream);
+    line-height: 1.6; -webkit-font-smoothing: antialiased; font-size: 16px;
+  }
+  a { color: var(--orange-deep); text-decoration: none; font-weight: 500; }
+  a:hover { color: var(--orange); }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 24px 80px; }
+
+  /* Header */
+  header.brand {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 4px 0 28px; border-bottom: 1px solid var(--navy-line);
+  }
+  .logo-img { height: 44px; width: auto; display: block; }
+  .meta { color: var(--ink-soft); font-size: 13px; text-align: right; line-height: 1.5; }
+  .meta .pill-meta {
+    display: inline-block; padding: 4px 10px; background: var(--navy); color: var(--cream);
+    border-radius: 999px; font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; font-weight: 600; margin-bottom: 6px;
+  }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  /* Hero */
+  .hero { margin-top: 56px; }
+  .eyebrow { color: var(--orange-deep); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; }
+  h1 {
+    font-family: var(--serif); font-weight: 700; font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.05; letter-spacing: -0.015em; color: var(--navy); margin: 14px 0 22px;
+  }
+  h1 .accent { color: var(--orange-deep); font-style: normal; }
+  .lede { color: var(--ink-soft); font-size: 18px; max-width: 730px; line-height: 1.55; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .pill {
+    display: inline-flex; align-items: center; padding: 6px 12px; border-radius: 999px;
+    font-size: 12px; font-weight: 600; background: var(--navy); color: var(--cream);
+  }
+  .pill.alt { background: var(--orange-soft); color: var(--orange-deep); border: 1px solid rgba(230,126,50,0.30); }
+
+  /* Section */
+  section { margin-top: 56px; }
+  h2 {
+    font-family: var(--serif); font-weight: 700; font-size: clamp(24px, 3vw, 32px);
+    color: var(--navy); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 6px;
+  }
+  h2 .num { color: var(--orange-deep); margin-right: 12px; }
+  .section-sub { color: var(--ink-mute); font-size: 15px; margin-bottom: 22px; }
+
+  .card {
+    background: var(--cream-card); border: 1px solid var(--navy-line);
+    border-radius: var(--radius); padding: 26px 28px; box-shadow: var(--shadow-card);
+  }
+  .card + .card { margin-top: 14px; }
+  .card h3 { font-family: var(--serif); font-weight: 700; font-size: 19px; color: var(--navy); margin: 0 0 12px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  ul.clean { margin: 0; padding-left: 20px; }
+  ul.clean li { margin: 8px 0; color: var(--ink-soft); line-height: 1.55; }
+  ul.clean li::marker { color: var(--orange); }
+  ul.clean li strong { color: var(--navy); font-weight: 600; }
+
+  ol.qs { margin: 0; padding-left: 22px; }
+  ol.qs li { margin: 14px 0; color: var(--ink-soft); line-height: 1.55; }
+  ol.qs li::marker { color: var(--orange-deep); font-weight: 700; }
+  ol.qs li strong { color: var(--navy); font-weight: 600; }
+
+  /* KPI tiles — values in navy; orange fails contrast on cream (2.56:1) */
+  .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 860px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 460px) { .kpi-row { grid-template-columns: 1fr; } }
+  .kpi {
+    background: var(--cream-card); border: 1px solid var(--navy-line);
+    border-top: 3px solid var(--orange); border-radius: 12px;
+    padding: 18px 20px 20px; box-shadow: var(--shadow-card);
+  }
+  .kpi .k-label {
+    color: var(--ink-mute); font-size: 12px; font-weight: 600; letter-spacing: 0.10em;
+    text-transform: uppercase; margin-bottom: 10px; line-height: 1.35; min-height: 2.7em;
+  }
+  .kpi .k-value { font-family: var(--sans); font-weight: 600; font-size: 40px; line-height: 1; color: var(--navy); letter-spacing: -0.02em; }
+  .kpi .k-value .unit { font-size: 20px; color: var(--ink-soft); margin-left: 2px; }
+  .kpi .k-note { color: var(--ink-mute); font-size: 13px; margin-top: 9px; line-height: 1.45; }
+
+  /* Small-multiple season charts — one hue, faceted (no categorical palette needed) */
+  .facets { display: grid; gap: 22px; }
+  .facet-label {
+    display: flex; align-items: baseline; gap: 10px;
+    font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 8px;
+  }
+  .facet-label .tot { color: var(--ink-mute); font-size: 13px; font-weight: 500; }
+  .mrow { display: grid; grid-template-columns: 46px 1fr 44px; align-items: center; gap: 12px; padding: 3px 0; }
+  .mrow .m { color: var(--ink-mute); font-size: 13px; font-weight: 600; }
+  .mtrack { background: rgba(30,58,95,0.06); border-radius: 4px; height: 16px; }
+  .mfill { background: var(--orange); height: 100%; border-radius: 4px; }
+  .mrow .v { color: var(--navy); font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+
+  /* Horizontal bars */
+  .bar-row { display: grid; grid-template-columns: 210px 1fr 96px; align-items: center; gap: 14px; padding: 9px 0; }
+  @media (max-width: 680px) { .bar-row { grid-template-columns: 120px 1fr 76px; gap: 10px; } }
+  .bar-label { color: var(--navy); font-size: 14px; font-weight: 600; line-height: 1.35; }
+  .bar-label small { display: block; color: var(--ink-mute); font-size: 12px; font-weight: 400; }
+  .bar-track { background: rgba(30,58,95,0.07); border-radius: 4px; height: 22px; }
+  .bar-fill { background: var(--orange); height: 100%; border-radius: 4px; }
+  .bar-value { color: var(--navy); font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+  .bar-value small { display: block; color: var(--ink-mute); font-size: 12px; font-weight: 400; }
+  .bars-note { color: var(--ink-mute); font-size: 13px; margin-top: 14px; font-style: italic; line-height: 1.5; }
+
+  /* Ask table */
+  .ask-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .ask-table th, .ask-table td { text-align: left; padding: 13px 4px; border-bottom: 1px solid var(--navy-line); }
+  .ask-table th { color: var(--ink-mute); font-weight: 600; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding-bottom: 11px; }
+  .ask-table tr:last-child td { border-bottom: none; }
+  .ask-table .amt { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--navy); font-weight: 600; }
+  .ask-table td.topic { color: var(--navy); font-weight: 500; }
+
+  /* Pull-quote */
+  .pullquote { margin: 32px 0 0; padding: 28px 32px; background: var(--navy); color: var(--cream); border-radius: var(--radius); box-shadow: var(--shadow-card); }
+  .pullquote .q { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(19px, 2.3vw, 25px); line-height: 1.35; }
+  .pullquote .attr { margin-top: 12px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); font-weight: 700; }
+
+  .quote-chip {
+    background: var(--cream); border: 1px solid var(--navy-line); border-left: 3px solid var(--orange);
+    border-radius: 8px; padding: 13px 16px; color: var(--ink-soft); font-size: 15px; line-height: 1.5; margin-bottom: 10px;
+  }
+  .quote-chip .who { display: block; margin-top: 6px; color: var(--ink-mute); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+
+  .callout {
+    margin-top: 16px; padding: 16px 18px; background: var(--orange-soft);
+    border-left: 3px solid var(--orange); border-radius: 8px;
+    color: var(--ink-soft); font-size: 14px; line-height: 1.55;
+  }
+  .callout strong { color: var(--orange-deep); font-weight: 700; }
+  .callout.calm { background: rgba(30,58,95,0.05); border-left-color: var(--navy); }
+  .callout.calm strong { color: var(--navy); }
+
+  /* CTA */
+  .cta { margin-top: 56px; padding: 36px 36px 40px; background: var(--navy); border-radius: var(--radius); color: var(--cream); box-shadow: var(--shadow-card); }
+  .cta h2 { color: var(--cream); margin: 0 0 8px; }
+  .cta p { color: rgba(251, 242, 228, 0.82); margin: 0 0 22px; max-width: 620px; font-size: 16px; }
+  .cta .signoff { margin: 28px 0 0; padding-top: 22px; border-top: 1px solid rgba(251,242,228,0.18); font-size: 16px; line-height: 1.6; }
+  .cta .signoff a { color: var(--orange); font-weight: 600; }
+
+  footer {
+    margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--navy-line);
+    color: var(--ink-mute); font-size: 13px; display: flex; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap; line-height: 1.6;
+  }
+  footer .foot-logo { height: 28px; width: auto; opacity: 0.85; margin-bottom: 6px; display: block; }
+
+  @media print {
+    body { background: white; }
+    .card, .pullquote, .cta, .kpi { box-shadow: none; }
+    .pullquote, .cta { background: var(--navy) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .kpi, .bar-fill, .bar-track, .mfill, .mtrack, .callout, .quote-chip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="brand">
+      <a class="logo-link" href="https://vendigroup.com" target="_blank" rel="noopener">
+        <img class="logo-img" src="https://vendigroup.com/logos/vendi-group-wide.svg" alt="Vendi Group" />
+      </a>
+      <div class="meta">
+        <span class="pill-meta">Findings</span><br/>
+        Prepared for <strong>Top Tier Lights</strong><br/>
+        July 23, 2026
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="eyebrow">2026 Season Readiness</div>
+      <h1>What <span class="accent">514 conversations</span> told us about your season</h1>
+      <p class="lede">
+        Before building your text assistant, we pulled every holiday-lighting conversation out of your CRM and
+        read them — three seasons, 514 customers, 3,307 messages from homeowners. Some of what came out is
+        about the assistant. Some of it is just about your business, and worth knowing either way. At the end
+        there's a short list of things only you can answer.
+      </p>
+      <div class="pill-row">
+        <span class="pill">3 seasons · 2023–2025</span>
+        <span class="pill">514 conversations</span>
+        <span class="pill alt">3,307 customer messages</span>
+      </div>
+    </div>
+
+    <!-- 1. Season clock -->
+    <section>
+      <h2><span class="num">01.</span>Your season is doubling — and compressing</h2>
+      <p class="section-sub">New holiday-lighting leads per month, all three seasons on the same scale.</p>
+
+      <div class="card">
+        <div class="facets">
+          <div>
+            <div class="facet-label">2023 season <span class="tot">172 leads</span></div>
+            <div class="mrow"><span class="m">Aug</span><div class="mtrack"><div class="mfill" style="width:0%"></div></div><span class="v">0</span></div>
+            <div class="mrow"><span class="m">Sep</span><div class="mtrack"><div class="mfill" style="width:0%"></div></div><span class="v">0</span></div>
+            <div class="mrow"><span class="m">Oct</span><div class="mtrack"><div class="mfill" style="width:11.3%"></div></div><span class="v">20</span></div>
+            <div class="mrow"><span class="m">Nov</span><div class="mtrack"><div class="mfill" style="width:53.7%"></div></div><span class="v">95</span></div>
+            <div class="mrow"><span class="m">Dec</span><div class="mtrack"><div class="mfill" style="width:30.5%"></div></div><span class="v">54</span></div>
+          </div>
+          <div>
+            <div class="facet-label">2024 season <span class="tot">206 leads</span></div>
+            <div class="mrow"><span class="m">Aug</span><div class="mtrack"><div class="mfill" style="width:0.6%"></div></div><span class="v">1</span></div>
+            <div class="mrow"><span class="m">Sep</span><div class="mtrack"><div class="mfill" style="width:10.7%"></div></div><span class="v">19</span></div>
+            <div class="mrow"><span class="m">Oct</span><div class="mtrack"><div class="mfill" style="width:23.2%"></div></div><span class="v">41</span></div>
+            <div class="mrow"><span class="m">Nov</span><div class="mtrack"><div class="mfill" style="width:58.2%"></div></div><span class="v">103</span></div>
+            <div class="mrow"><span class="m">Dec</span><div class="mtrack"><div class="mfill" style="width:18.1%"></div></div><span class="v">32</span></div>
+          </div>
+          <div>
+            <div class="facet-label">2025 season <span class="tot">370 leads</span></div>
+            <div class="mrow"><span class="m">Aug</span><div class="mtrack"><div class="mfill" style="width:14.1%"></div></div><span class="v">25</span></div>
+            <div class="mrow"><span class="m">Sep</span><div class="mtrack"><div class="mfill" style="width:16.9%"></div></div><span class="v">30</span></div>
+            <div class="mrow"><span class="m">Oct</span><div class="mtrack"><div class="mfill" style="width:61.0%"></div></div><span class="v">108</span></div>
+            <div class="mrow"><span class="m">Nov</span><div class="mtrack"><div class="mfill" style="width:100%"></div></div><span class="v">177</span></div>
+            <div class="mrow"><span class="m">Dec</span><div class="mtrack"><div class="mfill" style="width:4.5%"></div></div><span class="v">8</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="card">
+          <h3>Three things this says</h3>
+          <ul class="clean">
+            <li><strong>You've more than doubled in two seasons</strong> — 172 leads, then 206, then 370.</li>
+            <li><strong>It's getting more concentrated, not less.</strong> October and November were 67% of your season in 2023. Last year they were <strong>77%</strong>.</li>
+            <li><strong>The season now starts in August.</strong> You had zero August leads in 2023, one in 2024, and 25 last year. Waiting until October to be ready is a season behind.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What November actually looks like</h3>
+          <ul class="clean">
+            <li><strong>177 leads in one month</strong> last November — about six new conversations every single day.</li>
+            <li><strong>While you're installing</strong> five to six homes a day.</li>
+            <li><strong>That's the whole problem in one line.</strong> Nothing about your process is broken. There are just more conversations arriving than one person can hold.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>One thing we can't explain from the data.</strong> December collapsed last season — 54 leads in Dec 2023,
+        32 in Dec 2024, then just 8 in Dec 2025. Did you turn ads off, get fully booked, or stop taking December
+        work? Worth knowing, because if those leads are still out there it's a month you're leaving alone.
+      </div>
+    </section>
+
+    <!-- 2. When they text -->
+    <section>
+      <h2><span class="num">02.</span>When your customers actually text</h2>
+      <p class="section-sub">Every inbound message, converted to Houston local time.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="k-label">Replies outside business hours</div>
+          <div class="k-value">41<span class="unit">%</span></div>
+          <div class="k-note">Evenings and weekends — when you're least able to answer.</div>
+        </div>
+        <div class="kpi">
+          <div class="k-label">Typical customer reply speed</div>
+          <div class="k-value">5<span class="unit">min</span></div>
+          <div class="k-note">Half of all replies land within five minutes. They're holding the phone.</div>
+        </div>
+        <div class="kpi">
+          <div class="k-label">Your typical reply speed</div>
+          <div class="k-value">93<span class="unit">min</span></div>
+          <div class="k-note">Median. A quarter of leads waited more than seven hours.</div>
+        </div>
+        <div class="kpi">
+          <div class="k-label">Never got an answer</div>
+          <div class="k-value">106</div>
+          <div class="k-note">People who texted you and got no human reply at all.</div>
+        </div>
+      </div>
+
+      <div class="callout calm">
+        <strong>The mismatch is the finding.</strong> Your customers reply in five minutes. You reply in ninety-three.
+        That gap isn't a work-ethic problem — it's that four in ten of them are texting at 8pm or on a Saturday,
+        which is exactly when a one-man crew can't pick up.
+      </div>
+    </section>
+
+    <!-- 3. Which messages work -->
+    <section>
+      <h2><span class="num">03.</span>Which of your texts actually work</h2>
+      <p class="section-sub">Reply rate per send, counting only leads who hadn't replied yet — so the first message doesn't get unfair credit.</p>
+
+      <div class="card">
+        <div class="bar-row">
+          <div class="bar-label">"Winter wonderland or classic?"<small>Your opener</small></div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+          <div class="bar-value">76.8%<small>397/517</small></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">"Any thoughts on your display?"<small>Follow-up 2</small></div>
+          <div class="bar-track"><div class="bar-fill" style="width:33.2%"></div></div>
+          <div class="bar-value">25.5%<small>28/110</small></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">"We just missed your call"<small>Missed-call auto-reply</small></div>
+          <div class="bar-track"><div class="bar-fill" style="width:32.6%"></div></div>
+          <div class="bar-value">25.0%<small>4/16</small></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">"How does a quick call sound?"<small>Follow-up 4</small></div>
+          <div class="bar-track"><div class="bar-fill" style="width:21.4%"></div></div>
+          <div class="bar-value">16.4%<small>12/73</small></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">"Hope you're having a great day"<small>Follow-up 3</small></div>
+          <div class="bar-track"><div class="bar-fill" style="width:8.2%"></div></div>
+          <div class="bar-value">6.3%<small>5/79</small></div>
+        </div>
+        <p class="bars-note">
+          Every message that asks a real question lands around 68%. The one that asks nothing lands at 6.3%.
+        </p>
+      </div>
+
+      <div class="callout">
+        <strong>Your opener is doing extraordinary work — 77% of people answer it.</strong> For comparison, a good
+        cold text campaign runs 15–25%. Asking them to picture their house instead of pitching them is
+        why it works, and we're keeping it.
+      </div>
+
+      <div class="callout calm">
+        <strong>Follow-up 3 is dead weight.</strong> "Hope you're having a great day, no rush" gets 6.3% because it
+        asks nothing — there's nothing to reply to. Swapping it for a real question should get it into the same
+        range as your other follow-ups. That's a fix worth making whether or not the assistant ever goes live.
+      </div>
+    </section>
+
+    <!-- 4. What they ask -->
+    <section>
+      <h2><span class="num">04.</span>What they ask you, in order</h2>
+      <p class="section-sub">Across 3,307 inbound messages — the share of customers who raised each topic at least once.</p>
+
+      <div class="card">
+        <table class="ask-table">
+          <thead><tr><th>What they want to know</th><th class="amt">Share of customers</th></tr></thead>
+          <tbody>
+            <tr><td class="topic">How much does it cost?</td><td class="amt">50.8%</td></tr>
+            <tr><td class="topic">Colors and style — warm white, multicolor, C9</td><td class="amt">29.6%</td></tr>
+            <tr><td class="topic">Can I see what it'll look like first?</td><td class="amt">22.4%</td></tr>
+            <tr><td class="topic">When can you install?</td><td class="amt">20.8%</td></tr>
+            <tr><td class="topic">Can you reach my roof / second story?</td><td class="amt">20.0%</td></tr>
+            <tr><td class="topic">Trees, bushes, wreaths</td><td class="amt">16.5%</td></tr>
+            <tr><td class="topic">Deposit and payment</td><td class="amt">10.5%</td></tr>
+            <tr><td class="topic">What's included in the price?</td><td class="amt">8.0%</td></tr>
+            <tr><td class="topic">Can you hang lights I already own?</td><td class="amt">8.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>Look at what's third.</strong> More than one in five customers asks to see the design before they
+        commit — and your mockup is already the thing that closes them. Right now it only gets offered when you
+        have a free hand. It should be offered to everyone, immediately.
+      </div>
+
+      <div class="pullquote">
+        <div class="q">"I would love to create a mock up design for your approval. If you can provide me your address we can get started right away."</div>
+        <div class="attr">Your words — the assistant's whole job is getting to this sentence faster</div>
+      </div>
+    </section>
+
+    <!-- 5. What got missed -->
+    <section>
+      <h2><span class="num">05.</span>What got missed</h2>
+      <p class="section-sub">Real messages from customers who never received a reply.</p>
+
+      <div class="quote-chip">
+        "Yes I would like to get a quote. It's best to reach me via text. I'm looking for permanent lighting that I can adjust for the seasons."
+        <span class="who">November 2024 — no reply</span>
+      </div>
+      <div class="quote-chip">
+        "Green/red lights on the front roof line. Also interested in price of taking those lights up the ridges and peaks…"
+        <span class="who">October 2023 — no reply</span>
+      </div>
+      <div class="quote-chip">
+        "classic i have the lights just wondering on price"
+        <span class="who">September 2025 — no reply</span>
+      </div>
+
+      <div class="callout">
+        <strong>21 of the 106 unanswered customers were ready to buy.</strong> Not browsing — asking for a quote,
+        naming colors, giving you their address. At your average job size that's the single biggest number on
+        this page.
+      </div>
+    </section>
+
+    <!-- 6. Questions -->
+    <section>
+      <h2><span class="num">06.</span>What we need from you</h2>
+      <p class="section-sub">We pulled the answers out of your own texts, so most of this is just confirming what's still true.</p>
+
+      <div class="card">
+        <ol class="qs">
+          <li><strong>Per-foot pricing.</strong> We have <strong>$5.50/ft</strong> for a first install with new commercial-grade material, and <strong>$3.50/ft</strong> to hang material a customer already owns. Still right for 2026?</li>
+          <li><strong>Next-year reinstall.</strong> You've told customers "40% off," but your actual quotes ranged from about 35% to 55% off. What's the rule you want quoted?</li>
+          <li><strong>Deposit.</strong> We have deposits only on jobs <strong>$3,000 and up</strong>, otherwise paid in full on completion. Still right?</li>
+          <li><strong>Service area.</strong> You never put a boundary in writing in three years. How far from Cypress will you go?</li>
+          <li><strong>Commercial and HOA.</strong> About 3% of your leads are businesses or subdivisions. Same pricing, or should those come straight to you?</li>
+          <li><strong>Permanent lighting.</strong> Customers have asked for year-round adjustable lights. Do you offer it, or should the assistant say no?</li>
+          <li><strong>Mockup turnaround.</strong> In peak season, how fast can you realistically get one out — and should the assistant promise a timeframe or stay vague?</li>
+          <li><strong>Anything it must never say.</strong> Install dates, discounts, competitors — tell us and we'll wall it off.</li>
+        </ol>
+      </div>
+
+      <div class="callout calm">
+        <strong>Plus one practical thing:</strong> when a customer is ready, how do you want to be pinged — text,
+        email, or both? And to which number?
+      </div>
+    </section>
+
+    <div class="cta">
+      <h2>Where this goes next</h2>
+      <p>
+        Answer those eight and we can have the assistant built, loaded with your pricing, and in your hands to
+        test well before your leads start arriving in August.
+      </p>
+      <p class="signoff">
+        Jason Walkoviak<br />
+        <a href="tel:+18328759451">832-875-9451</a>
+      </p>
+    </div>
+
+    <footer>
+      <div>
+        <img class="foot-logo" src="https://vendigroup.com/logos/vendi-group-wide.svg" alt="Vendi Group" />
+        Top Tier Lights · 514 conversations analyzed, pulled July 23, 2026.
+      </div>
+      <div style="text-align:right;">
+        Questions? Just reply to the email this came from.<br/>
+        <a href="https://vendigroup.com" target="_blank" rel="noopener">vendigroup.com</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
